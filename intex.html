@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI YouTube Title Generator</title>
+  <style>
+    body{
+      font-family: Arial;
+      padding:20px;
+      background:#111;
+      color:white;
+      text-align:center;
+    }
+
+    input{
+      width:80%;
+      padding:12px;
+      border-radius:10px;
+      border:none;
+    }
+
+    button{
+      padding:12px 20px;
+      margin-top:10px;
+      border:none;
+      border-radius:10px;
+      background:red;
+      color:white;
+      font-size:18px;
+    }
+
+    #result{
+      margin-top:20px;
+      font-size:22px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>AI YouTube Title Generator</h1>
+
+<input type="text" id="topic" placeholder="Enter video topic">
+
+<br>
+
+<button onclick="generateTitle()">
+Generate
+</button>
+
+<div id="result"></div>
+
+<script>
+
+function generateTitle(){
+
+let topic =
+document.getElementById("topic").value;
+
+let titles = [
+ topic + " Gone Viral 😱",
+ "Top 10 " + topic + " Tricks 🔥",
+ topic + " Tutorial For Beginners",
+ "Best " + topic + " Secrets",
+ "How I Grew Using " + topic
+];
+
+let random =
+titles[Math.floor(Math.random()*titles.length)];
+
+document.getElementById("result").innerHTML =
+random;
+
+}
+
+</script>
+
+</body>
+</html>
